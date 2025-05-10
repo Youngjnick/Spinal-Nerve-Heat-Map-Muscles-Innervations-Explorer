@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  background: #fdfdfd;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.body-map {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  background: url('body-diagram.png') no-repeat center/cover;
+}
+
+.region {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.region[data-root="C5"] { top: 80px; left: 100px; background: red; }
+.region[data-root="C6"] { top: 140px; left: 110px; background: orange; }
+.region[data-root="C7"] { top: 200px; left: 120px; background: green; }
+/* Add more regions and positioning */
+
+.region.highlighted {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  padding: 10px 20px;
+  background: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.legend-item:hover {
+  background: #ddd;
+}
